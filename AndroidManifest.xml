@@ -24,6 +24,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.adjim.snake.TutorialPartI"
+            android:label="@string/gl_name"
+            android:theme="@style/AppTheme" >
+        </activity>
     </application>
 
 </manifest>

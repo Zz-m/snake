@@ -1,14 +1,16 @@
 package com.adjim.snake;
 
-import com.adjim.snake.util.SystemUiHider;
-
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.View.OnClickListener;
+
+import com.adjim.snake.util.SystemUiHider;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -53,6 +55,7 @@ public class StartActivity extends Activity {
 
 		final View controlsView = findViewById(R.id.fullscreen_content_controls);
 		final View contentView = findViewById(R.id.fullscreen_content);
+		final View enter_btn = findViewById(R.id.enter_button);
 
 		// Set up an instance of SystemUiHider to control the system UI for
 		// this activity.
@@ -116,6 +119,15 @@ public class StartActivity extends Activity {
 		// while interacting with the UI.
 		findViewById(R.id.dummy_button).setOnTouchListener(
 				mDelayHideTouchListener);
+		enter_btn.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent it = new Intent();
+				it.setClass(StartActivity.this, TutorialPartI.class);
+				startActivity(it);
+			}
+		});
 	}
 
 	@Override
