@@ -1,4 +1,4 @@
 Snake
 =========
 
-It's a nice day。 いじょう。
+It's a nice day。 DEPRECATED!
